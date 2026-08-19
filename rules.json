@@ -1,0 +1,65 @@
+[
+  {
+    "title": "HTTP service exposed",
+    "severity": "Medium",
+    "ports": [80, 8080, 8000, 8888],
+    "keywords": ["http"],
+    "reason": "A web service is reachable and should be assessed for application-level vulnerabilities and insecure configuration.",
+    "recommendation": "Perform authorized web enumeration and application security testing with Burp Suite or OWASP ZAP.",
+    "references": ["OWASP Web Security Testing Guide"]
+  },
+  {
+    "title": "HTTPS service exposed",
+    "severity": "Low",
+    "ports": [443, 8443],
+    "keywords": ["https"],
+    "reason": "An HTTPS service is exposed and should be checked for TLS configuration and web application security.",
+    "recommendation": "Review TLS configuration, security headers, authentication, and application endpoints.",
+    "references": ["OWASP Web Security Testing Guide"]
+  },
+  {
+    "title": "SSH service exposed",
+    "severity": "Medium",
+    "ports": [22],
+    "keywords": ["ssh"],
+    "reason": "SSH is remotely reachable and its configuration and authentication controls should be assessed.",
+    "recommendation": "Review SSH configuration, exposed authentication methods, access controls, and patch level.",
+    "references": ["CIS Benchmarks"]
+  },
+  {
+    "title": "FTP service exposed",
+    "severity": "Medium",
+    "ports": [21],
+    "keywords": ["ftp"],
+    "reason": "FTP may expose credentials or files if insecurely configured.",
+    "recommendation": "Check whether anonymous access is enabled and review encryption and access controls.",
+    "references": ["CWE-319"]
+  },
+  {
+    "title": "Telnet service exposed",
+    "severity": "High",
+    "ports": [23],
+    "keywords": ["telnet"],
+    "reason": "Telnet transmits credentials and session data without modern transport protection.",
+    "recommendation": "Verify whether Telnet is required; prefer SSH or another secure remote administration protocol.",
+    "references": ["CWE-319"]
+  },
+  {
+    "title": "Database service exposed",
+    "severity": "Medium",
+    "ports": [3306, 5432, 1433, 6379, 27017],
+    "keywords": ["mysql", "postgresql", "microsoft sql", "redis", "mongodb"],
+    "reason": "A database service is directly reachable and should normally be restricted to trusted application hosts.",
+    "recommendation": "Review network exposure, authentication, authorization, encryption, and configuration.",
+    "references": ["CIS Benchmarks"]
+  },
+  {
+    "title": "SMB service exposed",
+    "severity": "Medium",
+    "ports": [139, 445],
+    "keywords": ["microsoft-ds", "netbios-ssn", "smb"],
+    "reason": "SMB exposure can increase attack surface and should be restricted and hardened.",
+    "recommendation": "Review SMB version, signing, share permissions, authentication, and network exposure.",
+    "references": ["CIS Benchmarks"]
+  }
+]
