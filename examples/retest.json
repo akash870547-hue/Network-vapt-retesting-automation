@@ -1,0 +1,20 @@
+{
+  "target": "192.0.2.10",
+  "synthetic": true,
+  "findings": [
+    {
+      "host": "192.0.2.10",
+      "port": 80,
+      "service": "http",
+      "title": "HTTP service exposed",
+      "severity": "Medium"
+    },
+    {
+      "host": "192.0.2.10",
+      "port": 443,
+      "service": "https",
+      "title": "HTTPS service exposed",
+      "severity": "Low"
+    }
+  ]
+}
