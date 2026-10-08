@@ -76,3 +76,16 @@ HTML + JSON Report
 - Retest mode comparing two JSON results
 - PDF report generation
 - More service-specific assessment rules
+
+
+## Re-testing Workflow
+
+Use [retest.py](retest.py) to compare two machine-readable scan results:
+
+```bash
+python retest.py baseline.json retest.json
+```
+
+The comparison classifies observations as **OPEN**, **FIXED**, or **CHANGED** based on stable finding attributes. It is an analyst aid, not proof of exploitability.
+
+See [docs/retest-methodology.md](docs/retest-methodology.md) for the full workflow and [docs/retest-report-template.md](docs/retest-report-template.md) for reporting.
