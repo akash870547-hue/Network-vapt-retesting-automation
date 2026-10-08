@@ -1,0 +1,20 @@
+{
+  "target": "192.0.2.10",
+  "synthetic": true,
+  "findings": [
+    {
+      "host": "192.0.2.10",
+      "port": 23,
+      "service": "telnet",
+      "title": "Telnet service exposed",
+      "severity": "High"
+    },
+    {
+      "host": "192.0.2.10",
+      "port": 80,
+      "service": "http",
+      "title": "HTTP service exposed",
+      "severity": "Medium"
+    }
+  ]
+}
